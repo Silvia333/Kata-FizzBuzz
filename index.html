@@ -10,21 +10,20 @@
     <script>
        function kataFizz(number){
         var resultado;
-       // var numeroTmp = number && (cadena.indexOf('3'));
-       var cadena = number.toString();
+       var cadena = number.toString(10);
         
         if((number % 3 === 0) && (number % 5 === 0)){
             resultado = 'FizzBuzz';
-         }else if((number % 3 === 0)){
+         }else if((number % 3 === 0) || (cadena.indexOf('3')!== -1)){
             resultado = 'Fizz';
-           } else if((number % 5 === 0)){
+           } else if((number % 5 === 0) || (cadena.indexOf('5')!== -1)){
             resultado = 'Buzz';
            }else{
                 resultado = number;
            }
            return resultado;
        }
-       console.log(kataFizz(3))
+       console.log(kataFizz(151))
     </script>
 
 
